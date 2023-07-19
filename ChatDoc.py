@@ -56,7 +56,7 @@ from langchain import PromptTemplate, LLMChain
 import tempfile
 from PIL import Image
 
-st.title("🦜️🔗 CSV chat with falcon-7b LLM")
+st.title("🦜️🔗 ChatDoc with falcon-7b LLM")
 img = Image.open('ChatDoc_coverpic.jpg')
 
  
