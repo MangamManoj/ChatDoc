@@ -1,5 +1,5 @@
-%pip install beautifulsoup4 requests pandas langchain tiktoken pyarrow fastparquet chromadb typing-inspect==0.8.0 typing_extensions==4.5.0
-langchain==0.0.230
+beautifulsoup4 requests pandas langchain tiktoken pyarrow fastparquet chromadb typing-inspect==0.8.0 typing_extensions==4.5.0
+langchain
 chromadb==0.3.27
 tiktoken==0.4.0
 beautifulsoup4
