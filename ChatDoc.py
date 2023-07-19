@@ -31,7 +31,9 @@ Original file is located at
 import os
 import streamlit as st
 # os.environ["OPENAI_API_KEY"] = ""
-os.environ["HUGGINGFACEHUB_API_TOKEN"]='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'
+api_token = st.sidebar.text_input("Enter your Huggingface API token:")
+
+os.environ["HUGGINGFACEHUB_API_TOKEN"]='api_token'
 
 from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
