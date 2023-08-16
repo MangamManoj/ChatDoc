@@ -38,7 +38,6 @@ os.environ["HUGGINGFACEHUB_API_TOKEN"]=api_token
 from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
 from langchain.document_loaders import TextLoader
-# from langchain.document_loaders import PyPDFLoader
 from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.document_loaders import PyPDFLoader
 from langchain.indexes import VectorstoreIndexCreator
@@ -77,8 +76,8 @@ if uploaded_file :
         tmp_file.write(uploaded_file.getvalue())
         tmp_file_path = tmp_file.name
 
-    #loader = CSVLoader(file_path=tmp_file_path, encoding="utf-8")
-    loader = PyPDFLoader(file_path=tmp_file_path)
+    loader = CSVLoader(file_path=tmp_file_path, encoding="utf-8")
+    # loader = PyPDFLoader(file_path=tmp_file_path)
     # data = loader.load()
 
 # Set up the language model using the Hugging Face Hub repository
