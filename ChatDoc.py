@@ -69,8 +69,8 @@ st.image(img)
 
 
 #upload your csv data file
-#uploaded_file = st.sidebar.file_uploader("upload", type="csv")
-uploaded_file = st.sidebar.file_uploader("upload", type="pdf")
+uploaded_file = st.sidebar.file_uploader("upload", type="csv")
+# uploaded_file = st.sidebar.file_uploader("upload", type="pdf")
 
 if uploaded_file :
     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
@@ -109,7 +109,9 @@ retriever = db.as_retriever(search_type="similarity", search_kwargs={"k":2})
 # qa = ConversationalRetrievalChain.from_llm(OpenAI(), retriever)
 qa = ConversationalRetrievalChain.from_llm(llm, retriever)
 chat_history = []
-query = st.text_input("Enter your input text:", value="what is the region which highest TCV?")
+
+if st.button("Descriptive"):
+    query = st.text_input(value="what is the top insight in the document?")
 # query = "what is the region which highest TCV?"
 # result = qa({"question": query, "chat_history": chat_history})
 
